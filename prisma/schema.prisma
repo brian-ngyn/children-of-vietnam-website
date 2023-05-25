@@ -11,8 +11,24 @@ datasource db {
   relationMode = "prisma"
 }
 
-model Example {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+model Event {
+  id               String   @id @default(cuid())
+  eventTitle       String   @db.VarChar(255)
+  eventDescription String?  @db.VarChar(255)
+  eventDate        DateTime
+  eventPicture     String?  @db.VarChar(255)
+}
+
+model OpenExecPosition {
+  id                  String  @id @default(cuid())
+  positionTitle       String  @db.VarChar(255)
+  positionDescription String? @db.VarChar(255)
+}
+
+model TeamMember {
+  id                String  @id @default(cuid())
+  memberName        String  @db.VarChar(255)
+  memberRole        String  @db.VarChar(255)
+  memberDescription String? @db.VarChar(255)
+  memberImage       String? @db.VarChar(255)
 }
