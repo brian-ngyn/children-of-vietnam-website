@@ -3,7 +3,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <header aria-label="Site Header" className="bg-off-white">
-      <div className="border-b-[1.5px] border-[#dad7d1] mx-4">
+      <div className="border-b-[1.5px] border-[#dad7d1] z-50 mx-4">
         <div className="mx-auto flex h-16 max-w-screen items-center justify-center gap-8 px-4 sm:px-6 lg:px-8">
           <Link className="block text-green" href="/">
             <svg
@@ -21,7 +21,7 @@ const Navbar = () => {
 
           <div className="flex flex-1 items-center justify-end md:justify-between">
             <nav aria-label="Site Nav">
-              <ul className="flex items-center gap-6 text-sm">
+              <ul className="flex items-center gap-4 text-sm">
                 <li>
                   <Link
                     className="text-green transition hover:text-green/75"
@@ -58,14 +58,14 @@ const Navbar = () => {
                   </Link>
                 </li>
 
-                <li>
+                {/* <li>
                   <Link
                     className="text-green transition hover:text-green/75"
                     href="/join-us"
                   >
                     Join Us
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
