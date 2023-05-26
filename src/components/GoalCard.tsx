@@ -10,7 +10,7 @@ const GoalCard = (props: GoalCardProps) => {
   return (
     <>
       <div className="flex items-start gap-4 border-2 rounded-xl p-4">
-        <div className={`shrink-0 rounded-lg bg-[${color}] p-4`}>
+        <div className={`shrink-0 rounded-lg ${color} p-4`}>
           <svg
             className="h-5 w-5"
             fill="none"
