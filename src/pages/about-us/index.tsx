@@ -51,7 +51,7 @@ const TeamPage: NextPage = () => {
                   title="Lorem, ipsum dolor."
                   description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab
             possimus quisquam reiciendis tempora animi! Quaerat, saepe?"
-                  color="#4A6FA5"
+                  color="#4a6fa5"
                 />
                 <GoalCard
                   title="Lorem, ipsum dolor."
@@ -63,7 +63,7 @@ const TeamPage: NextPage = () => {
                   title="Lorem, ipsum dolor."
                   description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab
             possimus quisquam reiciendis tempora animi! Quaerat, saepe?"
-                  color="#4A6FA5"
+                  color="#4a6fa5"
                 />
                 <GoalCard
                   title="Lorem, ipsum dolor."
