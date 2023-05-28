@@ -14,7 +14,7 @@ const TeamPage: NextPage = () => {
         <LoadingPage />
       ) : (
         <div className="flex justify-center min-h-screen min-w-screen text-black bg-off-white">
-          <div className="items-center flex flex-col pt-16">
+          <div className="items-center flex flex-col md:pt-16 pt-4">
             <div className="flex flex-col gap-y-12 max-w-screen-xl px-4 py-8 sm:pt-12 sm:px-6 lg:pt-16 lg:px-8">
               <div className="text-3xl font-bold sm:text-5xl">Meet the Team</div>
 

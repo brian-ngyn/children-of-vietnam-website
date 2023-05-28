@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Home: NextPage = () => {
+  const {user, isLoaded } = useUser();
+
   return (
     <>
       <Head>
