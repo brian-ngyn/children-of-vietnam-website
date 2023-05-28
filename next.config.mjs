@@ -18,5 +18,16 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'assets.change.org',
+        port: '',
+        pathname: '/photos/**'
+      },
+    ],
+  },
 };
 export default config;
