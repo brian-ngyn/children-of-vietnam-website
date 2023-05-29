@@ -15,7 +15,7 @@ const Navbar = () => {
             <Image
               style={{ objectFit: "contain" }}
               fill={true}
-              src="/logo-no-text.png"
+              src="/logos/logo-no-text.png"
               alt="Logo"
             />
           </Link>
@@ -23,15 +23,6 @@ const Navbar = () => {
           <div className="flex flex-1 items-center justify-end md:justify-between">
             <nav aria-label="Site Nav">
               <ul className="flex items-center gap-4 text-sm">
-                <li>
-                  <Link
-                    className={pathname == "/" ? isCurrPathStyling : notCurrPathStyling}
-                    href="/"
-                  >
-                    Home
-                  </Link>
-                </li>
-
                 <li>
                   <Link
                     className={pathname == "/about-us" ? isCurrPathStyling : notCurrPathStyling}
@@ -59,14 +50,14 @@ const Navbar = () => {
                   </Link>
                 </li>
 
-                {/* <li>
+                <li>
                   <Link
-                    className="text-green transition hover:text-green/75"
+                    className={pathname == "/join-us" ? isCurrPathStyling : notCurrPathStyling}
                     href="/join-us"
                   >
                     Join Us
                   </Link>
-                </li> */}
+                </li>
               </ul>
             </nav>
           </div>

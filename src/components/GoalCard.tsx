@@ -30,9 +30,8 @@ const GoalCard = (props: GoalCardProps) => {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold">{title}</h2>
-
-          <p className="mt-1 text-sm text-gray-500">{description}</p>
+          <div className="text-lg font-bold">{title}</div>
+          <div className="mt-1 text-sm text-gray-500">{description}</div>
         </div>
       </div>
     </>

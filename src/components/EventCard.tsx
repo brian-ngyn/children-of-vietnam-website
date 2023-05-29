@@ -10,7 +10,7 @@ const EventCard = ({ event }: EventCardProps) => {
     event;
   return (
     <>
-      <div className="bg-gray-100 block rounded-lg p-4 shadow-lg shadow-black-200">
+      <div className="bg-gray-100 block rounded-lg p-4 shadow-lg shadow-black-200 transition hover:shadow-xl">
         {eventPicture ? (
           <div className="h-56 w-full relative">
             <Image
@@ -22,56 +22,61 @@ const EventCard = ({ event }: EventCardProps) => {
           </div>
         ) : null}
         <div className="mt-2">
-          <dl>
-            <div>
-              <dd className="font-medium">{eventTitle}</dd>
-            </div>
-
-            <div>
-              <dd className="text-sm text-gray-500">{eventDescription}</dd>
-            </div>
-          </dl>
+          <div>
+            <div className="font-medium">{eventTitle}</div>
+            <div className="text-sm text-gray-500">{eventDescription}</div>
+          </div>
 
           <div className="mt-6 flex items-center gap-8 text-xs">
             <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
               <div className="relative h-4 w-4">
-                <Image alt="Where" src="/building.svg" fill style={{ objectFit: "contain" }} />
+                <Image
+                  alt="Where"
+                  src="/icons/building.svg"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
               </div>
 
               <div className="mt-1.5 sm:mt-0">
-                <p className="text-gray-500">Where</p>
+                <div className="text-gray-500">Where</div>
 
-                <p className="font-medium">{eventLocation}</p>
+                <div className="font-medium">{eventLocation}</div>
               </div>
             </div>
 
             <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
               <div className="relative h-4 w-4">
-                <Image alt="Where" src="/calendar.svg" fill style={{ objectFit: "contain" }} />
+                <Image
+                  alt="Where"
+                  src="/icons/calendar.svg"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
               </div>
 
               <div className="mt-1.5 sm:mt-0">
-                <p className="text-gray-500">When</p>
+                <div className="text-gray-500">When</div>
 
-                <p className="font-medium">{eventDate.toDateString()}</p>
+                <div className="font-medium">{eventDate.toDateString()}</div>
               </div>
             </div>
 
             <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
               <div className="relative h-4 w-4">
-                <Image alt="Where" src="/clock.svg" fill style={{ objectFit: "contain" }} />
+                <Image alt="Where" src="/icons/clock.svg" fill style={{ objectFit: "contain" }} />
               </div>
 
               <div className="mt-1.5 sm:mt-0">
-                <p className="text-gray-500">Time</p>
+                <div className="text-gray-500">Time</div>
 
-                <p className="font-medium">
+                <div className="font-medium">
                   {eventTime.toLocaleString("en-US", {
                     hour: "numeric",
                     minute: "numeric",
                     hour12: true,
                   })}
-                </p>
+                </div>
               </div>
             </div>
           </div>

@@ -29,7 +29,7 @@ const TeamPage: NextPage = () => {
                               src={
                                 teamMember.memberImage
                                   ? teamMember.memberImage
-                                  : "/female-avatar.svg"
+                                  : "/images/female-avatar.svg"
                               }
                               fill
                               style={{ objectFit: "cover", borderRadius: "999px" }}

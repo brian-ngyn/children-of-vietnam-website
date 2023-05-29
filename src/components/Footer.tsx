@@ -11,17 +11,17 @@ const Footer = () => {
               <Image
                 style={{ objectFit: "contain" }}
                 fill={true}
-                src="/logo-no-text.png"
+                src="/logos/logo-no-text.png"
                 alt="Logo"
               />
             </div>
             <div className="flex items-center text-gray-700 font-semibold">Children of Vietnam</div>
           </div>
 
-          <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
+          <div className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
             A student led club at the University of Calgary wanting to impact the lives of children
             in Vietnam!
-          </p>
+          </div>
 
           <nav aria-label="Footer Nav" className="mt-12">
             <ul className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
