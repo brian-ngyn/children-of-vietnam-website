@@ -23,7 +23,8 @@ model Event {
 model OpenExecPosition {
   id                  String  @id @default(cuid())
   positionTitle       String  @db.VarChar(255)
-  positionDescription String? @db.VarChar(255)
+  positionDescription String? @db.VarChar()
+  positionLink        String? @db.VarChar(255)
 }
 
 model TeamMember {
