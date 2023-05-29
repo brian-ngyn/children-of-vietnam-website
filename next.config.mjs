@@ -20,14 +20,7 @@ const config = {
   },
 
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'assets.change.org',
-        port: '',
-        pathname: '/photos/**'
-      },
-    ],
+    domains: ["assets.change.org"],
   },
 };
 export default config;
