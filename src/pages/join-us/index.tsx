@@ -1,6 +1,7 @@
 import Carousel from "@/components/Carousel";
 import ExecPositionCard from "@/components/ExecPositionCard";
 import { LoadingPage } from "@/components/LoadingPage";
+import PerkCard from "@/components/PerkCard";
 import { api } from "@/utils/api";
 import { type NextPage } from "next";
 import Image from "next/image";
@@ -34,7 +35,7 @@ const JoinUsPage: NextPage = () => {
               </div>
 
               <div className="pt-16 text-3xl font-bold sm:text-5xl">Member Perks</div>
-              <div className="flex w-full flex-col md:flex-row md:gap-24">
+              <div className="flex justify-center items-center w-full flex-col md:flex-row md:gap-12">
                 <Carousel loop>
                   {images.map((src, i) => {
                     return (
@@ -45,30 +46,21 @@ const JoinUsPage: NextPage = () => {
                   })}
                 </Carousel>
                 <div className="grow">
-                  <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-2 md:gap-12">
-                    <div className="rounded-xl bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
-                      <div className="mt-2 font-bold">First Perk</div>
-
-                      <div className="text-sm text-gray-600">
-                        description of 1st perk i got lazy with the styling here, ill change it up
-                        to look nicer later
-                      </div>
-                    </div>
-                    <div className="rounded-xl bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
-                      <div className="mt-2 font-bold">second Perk</div>
-
-                      <div className="text-sm text-gray-600">description of 2nd perk</div>
-                    </div>
-                    <div className="rounded-xl bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
-                      <div className="mt-2 font-bold">Third Perk</div>
-
-                      <div className="text-sm text-gray-600">description of 3rd perk</div>
-                    </div>
-                    <div className="rounded-xl bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
-                      <div className="mt-2 font-bold">fourth Perk</div>
-
-                      <div className="text-sm text-gray-600">description of 4th perk</div>
-                    </div>
+                  <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-2 md:gap-6 grid-flow-row">
+                    <PerkCard
+                      title="Perk 1"
+                      description="Develop skills for advocacy and activism"
+                    />
+                    <PerkCard title="Perk 2" description="Create opportunities to impact lives" />
+                    <PerkCard title="Perk 3" description="Participate in and create fun events" />
+                    <PerkCard
+                      title="Perk 4"
+                      description="Participate learn and experience vietnamese culture, history and traditions"
+                    />
+                    <PerkCard
+                      title="Perk 5"
+                      description="Work globally to help transform lives"
+                    />
                   </div>
                 </div>
               </div>
