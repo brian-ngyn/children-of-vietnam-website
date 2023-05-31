@@ -10,7 +10,7 @@ const OpenExecPositionCard = ({ openExecPosition }: OpenExecPositionCardProps) =
 
   return (
     <>
-      <div className="flex h-full w-full flex-col items-stretch rounded-lg border bg-gray-100 p-4 shadow-lg shadow-black transition hover:shadow-xl sm:p-6">
+      <div className="shadow-black-200 flex h-full w-full flex-col items-stretch rounded-lg border bg-gray-100 p-4 shadow-lg transition hover:shadow-xl sm:p-6">
         <div className="grow">
           <div>
             <div className="mt-0.5 text-lg font-medium text-black">{positionTitle}</div>
