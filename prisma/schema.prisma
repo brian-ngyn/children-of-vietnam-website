@@ -17,7 +17,7 @@ model Event {
   eventDate        DateTime @db.Date
   eventTime        DateTime @db.Time
   eventPicture     String?  @db.VarChar(255)
-  eventLocation    String  @db.VarChar(255)
+  eventLocation    String   @db.VarChar(255)
 }
 
 model OpenExecPosition {

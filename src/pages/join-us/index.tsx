@@ -19,11 +19,11 @@ const JoinUsPage: NextPage = () => {
       {isLoading ? (
         <LoadingPage />
       ) : (
-        <div className="flex justify-center min-h-screen min-w-screen text-black bg-off-white">
-          <div className="items-center flex flex-col md:pt-16 pt-4">
-            <div className="flex flex-col gap-y-8 max-w-screen-xl px-4 py-8 sm:pt-12 sm:px-6 lg:pt-16 lg:px-8">
+        <div className="flex min-h-screen justify-center bg-off-white text-black">
+          <div className="flex flex-col items-center pt-4 md:pt-16">
+            <div className="flex max-w-screen-xl flex-col gap-y-8 px-4 py-8 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16">
               <div className="text-3xl font-bold sm:text-5xl">Open Executive Positions</div>
-              <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 {data?.map((openExecPosition) => {
                   return (
                     <div key={openExecPosition.id}>
@@ -33,8 +33,8 @@ const JoinUsPage: NextPage = () => {
                 })}
               </div>
 
-              <div className="text-3xl font-bold sm:text-5xl pt-16">Member Perks</div>
-              <div className="flex flex-col md:flex-row w-full md:gap-24">
+              <div className="pt-16 text-3xl font-bold sm:text-5xl">Member Perks</div>
+              <div className="flex w-full flex-col md:flex-row md:gap-24">
                 <Carousel loop>
                   {images.map((src, i) => {
                     return (
@@ -45,8 +45,8 @@ const JoinUsPage: NextPage = () => {
                   })}
                 </Carousel>
                 <div className="grow">
-                  <div className="grid md:grid-cols-2 md:grid-rows-2 grid-cols-1 md:gap-12 gap-4">
-                    <div className="bg-gray-100 rounded-xl p-4 shadow-lg transition hover:shadow-xl">
+                  <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-2 md:gap-12">
+                    <div className="rounded-xl bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
                       <div className="mt-2 font-bold">First Perk</div>
 
                       <div className="text-sm text-gray-600">
@@ -54,17 +54,17 @@ const JoinUsPage: NextPage = () => {
                         to look nicer later
                       </div>
                     </div>
-                    <div className="bg-gray-100 rounded-xl p-4 shadow-lg transition hover:shadow-xl">
+                    <div className="rounded-xl bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
                       <div className="mt-2 font-bold">second Perk</div>
 
                       <div className="text-sm text-gray-600">description of 2nd perk</div>
                     </div>
-                    <div className="bg-gray-100 rounded-xl p-4 shadow-lg transition hover:shadow-xl">
+                    <div className="rounded-xl bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
                       <div className="mt-2 font-bold">Third Perk</div>
 
                       <div className="text-sm text-gray-600">description of 3rd perk</div>
                     </div>
-                    <div className="bg-gray-100 rounded-xl p-4 shadow-lg transition hover:shadow-xl">
+                    <div className="rounded-xl bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
                       <div className="mt-2 font-bold">fourth Perk</div>
 
                       <div className="text-sm text-gray-600">description of 4th perk</div>
@@ -73,8 +73,8 @@ const JoinUsPage: NextPage = () => {
                 </div>
               </div>
 
-              <div className="text-3xl font-bold sm:text-5xl pt-16">Interested?</div>
-              <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
+              <div className="pt-16 text-3xl font-bold sm:text-5xl">Interested?</div>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 Subscribe to our mailing list ill add a forum to put in your email address to sign
                 up later
               </div>

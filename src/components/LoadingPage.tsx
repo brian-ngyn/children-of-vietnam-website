@@ -3,7 +3,7 @@ export const LoadingSpinner = (props: { size?: number }) => {
     <div role="status">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="m-auto bg-none block"
+        className="m-auto block bg-none"
         width="200px"
         height="200px"
         viewBox="0 0 100 100"
@@ -26,7 +26,7 @@ export const LoadingSpinner = (props: { size?: number }) => {
 
 export const LoadingPage = () => {
   return (
-    <div className="flex min-h-screen min-w-screen justify-center pt-64 bg-off-white">
+    <div className="flex min-h-screen justify-center bg-off-white pt-64">
       <LoadingSpinner size={60} />
     </div>
   );

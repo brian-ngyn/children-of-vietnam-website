@@ -6,10 +6,10 @@ import Image from "next/image";
 const TeamPage: NextPage = () => {
   return (
     <>
-      <div className="items-center flex flex-col pt-4 md:pt-16 text-black bg-off-white">
+      <div className="flex flex-col items-center bg-off-white pt-4 text-black md:pt-16">
         <div className="text-black">
-          <div className="max-w-screen-xl px-4 py-8 sm:pt-12 sm:px-6 lg:pt-16 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-y-12">
+          <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16">
+            <div className="grid gap-y-12 md:grid-cols-2">
               <div className="flex flex-col">
                 <div className="text-3xl font-bold sm:text-5xl">Mission</div>
                 <div className="mt-4 text-gray-600">
@@ -18,14 +18,14 @@ const TeamPage: NextPage = () => {
                   cumque id tenetur quibusdam, quos fuga minima.
                 </div>
               </div>
-              <div className="flex justify-center h-64">
+              <div className="flex h-64 justify-center">
                 <div className="relative aspect-square overflow-visible">
                   <Image fill src="/images/support.svg" alt="Logo" style={{ objectFit: "cover" }} />
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center justify-center my-12">
+            <div className="my-12 flex items-center justify-center">
               <Image src="/icons/ellipsis-vertical.svg" width={12} height={55} alt="ellipsis" />
             </div>
 

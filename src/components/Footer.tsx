@@ -4,10 +4,10 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer aria-label="Site Footer" className="bg-off-white">
-      <div className="flex border-t-[1.5px] border-[#dad7d1] mx-4">
+      <div className="mx-4 flex border-t-[1.5px] border-[#dad7d1]">
         <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
-          <div className="flex h-16 gap-x-4 justify-center text-green">
-            <div className="relative h-full aspect-square">
+          <div className="flex h-16 justify-center gap-x-4 text-green">
+            <div className="relative aspect-square h-full">
               <Image
                 style={{ objectFit: "contain" }}
                 fill={true}
@@ -15,7 +15,7 @@ const Footer = () => {
                 alt="Logo"
               />
             </div>
-            <div className="flex items-center text-gray-700 font-semibold">Children of Vietnam</div>
+            <div className="flex items-center font-semibold text-gray-700">Children of Vietnam</div>
           </div>
 
           <div className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
@@ -111,7 +111,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <div className="pt-6 flex items-center justify-center text-center text-sm text-gray-500 lg:mt-0 lg:text-right">
+          <div className="flex items-center justify-center pt-6 text-center text-sm text-gray-500 lg:mt-0 lg:text-right">
             Copyright &copy; 2023. All rights reserved.
           </div>
         </div>

@@ -13,13 +13,13 @@ const TeamPage: NextPage = () => {
       {isLoading ? (
         <LoadingPage />
       ) : (
-        <div className="flex justify-center min-h-screen min-w-screen text-black bg-off-white">
-          <div className="items-center flex flex-col md:pt-16 pt-4">
-            <div className="flex flex-col gap-y-12 max-w-screen-xl px-4 py-8 sm:pt-12 sm:px-6 lg:pt-16 lg:px-8">
+        <div className="flex min-h-screen justify-center bg-off-white text-black">
+          <div className="flex flex-col items-center pt-4 md:pt-16">
+            <div className="flex max-w-screen-xl flex-col gap-y-12 px-4 py-8 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16">
               <div className="text-3xl font-bold sm:text-5xl">Meet the Team</div>
 
-              <div className="pt-18">
-                <div className="flex flex-col md:flex-row gap-y-10 gap-x-24">
+              <div className="">
+                <div className="flex flex-col gap-x-24 gap-y-10 md:flex-row">
                   {data?.map((teamMember) => {
                     return (
                       <div className="flex flex-col gap-2" key={teamMember.id}>
@@ -36,7 +36,7 @@ const TeamPage: NextPage = () => {
                               alt="Photo"
                             />
                           </div>
-                          <div className="flex flex-col w-48">
+                          <div className="flex w-48 flex-col">
                             <div className="text-3xl font-semibold">{teamMember.memberName}</div>
                             <div className="">{teamMember.memberRole}</div>
                             <div className="text-gray-500">{teamMember.memberDescription}</div>

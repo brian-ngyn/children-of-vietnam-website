@@ -7,12 +7,12 @@ const CarouselDots = ({ itemsLength, selectedIndex }: CarouselDotsProps) => {
   const arr = new Array(itemsLength).fill(0);
 
   return (
-    <div className="flex gap-1 my-2 justify-center -translate-y-5">
+    <div className="my-2 flex -translate-y-5 justify-center gap-1">
       {arr.map((_, index) => {
         const selected = index === selectedIndex;
         return (
           <div
-            className={`h-2 w-2 rounded-full transition-all duration-300 bg-[#4A6FA5] ${
+            className={`h-2 w-2 rounded-full bg-[#4A6FA5] transition-all duration-300 ${
               selected ? "" : "opacity-50"
             }`}
             key={index}

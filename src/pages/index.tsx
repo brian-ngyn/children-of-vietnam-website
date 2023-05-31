@@ -21,8 +21,8 @@ const Home: NextPage = () => {
           sizes="<generated>"
         />
       </Head>
-      <main className="items-center min-h-screen flex flex-col text-black bg-off-white">
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:pt-12 sm:px-6 lg:pt-16 lg:px-8">
+      <main className="flex min-h-screen flex-col items-center bg-off-white text-black">
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
               <Image
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
               />
             </div>
 
-            <div className="lg:py-24 text-center lg:text-left">
+            <div className="text-center lg:py-24 lg:text-left">
               <div className="text-3xl font-bold sm:text-5xl">Children of Vietnam</div>
 
               <div className="mt-4 text-gray-600">
@@ -54,14 +54,14 @@ const Home: NextPage = () => {
         <div className="mt-4">
           <Image src="/icons/ellipsis-vertical.svg" width={12} height={55} alt="ellipsis" />
         </div>
-        <div className="min-w-screen mx-8 md:mx-24 mt-18">
-          <div className="mx-auto max-w-screen-xl px-4 py-8 sm:pb-12 sm:px-6 lg:pb-16 lg:px-8">
+        <div className="mx-8 md:mx-24">
+          <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:pb-12 lg:px-8 lg:pb-16">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-              <div className="relative h-64 overflow-hidden rounded-lg order-last md:order-first sm:h-80 lg:h-full">
+              <div className="relative order-last h-64 overflow-hidden rounded-lg sm:h-80 md:order-first lg:h-full">
                 <Image fill src="/images/support.svg" alt="Logo" style={{ objectFit: "contain" }} />
               </div>
 
-              <div className="lg:py-24 text-center lg:text-left">
+              <div className="text-center lg:py-24 lg:text-left">
                 <div className="text-3xl font-bold sm:text-5xl">Who are we?</div>
 
                 <div className="mt-4 text-gray-600">
