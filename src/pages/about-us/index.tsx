@@ -13,9 +13,9 @@ const TeamPage: NextPage = () => {
               <div className="flex flex-col">
                 <div className="text-3xl font-bold sm:text-5xl">Mission</div>
                 <div className="mt-4 text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolores iure
-                  fugit totam iste obcaecati. Consequatur ipsa quod ipsum sequi culpa delectus,
-                  cumque id tenetur quibusdam, quos fuga minima.
+                  By raising awareness and money for children, we hope to increase accessibility to
+                  essential items and supplies, as well as aid in achieving a better future for
+                  these children.
                 </div>
               </div>
               <div className="flex h-64 justify-center">
@@ -41,34 +41,29 @@ const TeamPage: NextPage = () => {
 
             <div className="mt-8 grid grid-cols-1 gap-8 md:m-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
               <GoalCard
-                title="Lorem, ipsum dolor."
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab
-            possimus quisquam reiciendis tempora animi! Quaerat, saepe?"
-                color="bg-[#F95738]"
+                title="Donate"
+                description="to as many orphanages as possible through fundraising events hosted by our club"
+                logo="/icons/donate-icon.svg"
               />
               <GoalCard
-                title="Lorem, ipsum dolor."
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab
-            possimus quisquam reiciendis tempora animi! Quaerat, saepe?"
-                color="bg-[#4A6FA5]"
+                title="Impact"
+                description="lives of Vietnamese youth and children by providing items that may be inaccessible"
+                logo="/icons/impact-icon.svg"
               />
               <GoalCard
-                title="Lorem, ipsum dolor."
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab
-            possimus quisquam reiciendis tempora animi! Quaerat, saepe?"
-                color="bg-[#F95738]"
+                title="Spread"
+                description="Vietnamese tradition and culture!"
+                logo="/icons/spread-icon.svg"
               />
               <GoalCard
-                title="Lorem, ipsum dolor."
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab
-            possimus quisquam reiciendis tempora animi! Quaerat, saepe?"
-                color="bg-[#4A6FA5]"
+                title="Raise"
+                description="awareness and bring global support"
+                logo="/icons/raise-icon.svg"
               />
               <GoalCard
-                title="Lorem, ipsum dolor."
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque tempore est ab
-            possimus quisquam reiciendis tempora animi! Quaerat, saepe?"
-                color="bg-[#F95738]"
+                title="Inspire"
+                description="others to take action"
+                logo="/icons/inspire-icon.svg"
               />
             </div>
           </div>

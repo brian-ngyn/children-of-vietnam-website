@@ -37,17 +37,9 @@ const Home: NextPage = () => {
               <div className="text-3xl font-bold sm:text-5xl">Children of Vietnam</div>
 
               <div className="mt-4 text-gray-600">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic atque tenetur
-                quis eius quos ea neque sunt, accusantium soluta minus veniam tempora deserunt?
-                Molestiae eius quidem quam repellat.
+                A non-profit, student-led organization, passionate about helping Vietnamese
+                orphanages through raising awareness and donations!
               </div>
-
-              <Link
-                href="/join-us"
-                className="mt-8 inline-block rounded bg-green px-12 py-3 text-sm font-medium text-white transition hover:bg-green/75"
-              >
-                Join us today!
-              </Link>
             </div>
           </div>
         </div>
@@ -56,17 +48,24 @@ const Home: NextPage = () => {
         </div>
         <div className="mx-8 md:mx-24">
           <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:pb-12 lg:px-8 lg:pb-16">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-              <div className="relative order-last h-64 overflow-hidden rounded-lg sm:h-80 md:order-first lg:h-full">
-                <Image fill src="/images/support.svg" alt="Logo" style={{ objectFit: "contain" }} />
-              </div>
-
-              <div className="text-center lg:py-24 lg:text-left">
+            <div className="grid grid-cols-1 gap-8">
+              <div className="flex h-full w-full flex-col items-center justify-center">
                 <div className="text-3xl font-bold sm:text-5xl">Who are we?</div>
-
-                <div className="mt-4 text-gray-600">
-                  A non-profit, student-led organization, passionate about helping Vietnamese
-                  orphanages through raising awareness and donations!
+                <div className="relative h-[350px] w-[400px] overflow-hidden rounded-lg">
+                  <Image
+                    fill
+                    src="/images/groupphoto.svg"
+                    alt="Logo"
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+                <div>
+                  <Link
+                    href="/join-us"
+                    className="rounded bg-green px-12 py-3 text-sm font-medium text-white transition hover:bg-green/75"
+                  >
+                    Join us today!
+                  </Link>
                 </div>
               </div>
             </div>
