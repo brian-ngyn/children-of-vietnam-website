@@ -82,7 +82,7 @@ const JoinUsPage: NextPage = () => {
                               message: "invalid email address",
                             },
                           })}
-                          className="w-full rounded-md border-gray-200 bg-gray-100 p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-my-blue"
+                          className="w-full rounded-md border-gray-200 bg-gray-100 p-3 text-gray-700 shadow-md transition focus:border-white focus:outline-none focus:ring focus:ring-my-blue"
                         />
                       </div>
 
