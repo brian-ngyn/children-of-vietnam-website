@@ -6,10 +6,11 @@ export default {
     extend: {
       colors: {
         "off-white": "#F6F2EC",
-        "green": "#4E7A51",
-        "black": "#121212",
+        green: "#4E7A51",
+        black: "#121212",
+        "my-blue": "#4A6FA5",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 } satisfies Config;
