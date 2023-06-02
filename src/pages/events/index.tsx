@@ -1,4 +1,4 @@
-import EventCard from "@/components/EventCard";
+import EventCard from "@/components/Cards/EventCard";
 import { LoadingPage } from "@/components/LoadingPage";
 import imgLoader from "@/hooks/imgLoader";
 import { api } from "@/utils/api";

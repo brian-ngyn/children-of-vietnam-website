@@ -1,4 +1,4 @@
-import GoalCard from "@/components/GoalCard";
+import GoalCard from "@/components/Cards/GoalCard";
 import { api } from "@/utils/api";
 import { type NextPage } from "next";
 import Image from "next/image";

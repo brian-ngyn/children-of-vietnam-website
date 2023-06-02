@@ -1,7 +1,7 @@
-import Carousel from "@/components/Carousel";
-import ExecPositionCard from "@/components/ExecPositionCard";
+import ExecPositionCard from "@/components/Cards/ExecPositionCard";
+import PerkCard from "@/components/Cards/PerkCard";
+import Carousel from "@/components/Carousel/Carousel";
 import { LoadingPage } from "@/components/LoadingPage";
-import PerkCard from "@/components/PerkCard";
 import { api } from "@/utils/api";
 import { type NextPage } from "next";
 import Image from "next/image";

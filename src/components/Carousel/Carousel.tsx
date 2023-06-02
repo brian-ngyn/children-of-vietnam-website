@@ -1,4 +1,4 @@
-import CarouselDots from "@/components/CarouselDots";
+import CarouselDots from "@/components/Carousel/CarouselDots";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel, { type EmblaOptionsType } from "embla-carousel-react";
 import React from "react";
