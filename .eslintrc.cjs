@@ -21,7 +21,7 @@ const config = {
   parserOptions: {
     project: path.join(__dirname, "tsconfig.json"),
   },
-  plugins: ["@typescript-eslint", "simple-import-sort", "promise"],
+  plugins: ["@typescript-eslint", "promise"],
   extends: [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
@@ -37,11 +37,20 @@ const config = {
         fixStyle: "inline-type-imports",
       },
     ],
+    "@typescript-eslint/no-misused-promises": [
+      2,
+      {
+        checksVoidReturn: {
+          attributes: false,
+        },
+      },
+    ],
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
     eqeqeq: ["error", "smart"],
     "prettier/prettier": ["error", prettierConfig],
     "no-eval": "error",
     "no-var": "error",
+    "tailwindcss/no-custom-classname": "error",
     "no-restricted-imports": ["error", { patterns: [".*"] }],
   },
 };
