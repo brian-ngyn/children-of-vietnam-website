@@ -49,9 +49,9 @@ const Home: NextPage = () => {
         <div className="mx-8 md:mx-24">
           <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:pb-12 lg:px-8 lg:pb-16">
             <div className="grid grid-cols-1 gap-8">
-              <div className="flex h-full w-full flex-col items-center justify-center">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-y-4">
                 <div className="text-3xl font-bold sm:text-5xl">Who are we?</div>
-                <div className="relative h-[350px] w-[400px] overflow-hidden rounded-lg">
+                <div className="relative h-[250px] w-[300px] overflow-hidden rounded-lg md:h-[350px] md:w-[400px]">
                   <Image
                     fill
                     src="/images/groupphoto.svg"
