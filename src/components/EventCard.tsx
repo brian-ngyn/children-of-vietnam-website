@@ -10,7 +10,7 @@ const EventCard = ({ event }: EventCardProps) => {
     event;
   return (
     <>
-      <div className="shadow-black-200 block rounded-lg bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
+      <div className="block rounded-lg bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
         {eventPicture ? (
           <div className="relative h-56 w-full">
             <Image
