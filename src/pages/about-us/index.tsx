@@ -31,23 +31,17 @@ const TeamPage: NextPage = () => {
 
             <div className="max-w-2xl">
               <div className="text-3xl font-bold sm:text-5xl">Goals</div>
-
-              <div className="mt-4 text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolores iure fugit
-                totam iste obcaecati. Consequatur ipsa quod ipsum sequi culpa delectus, cumque id
-                tenetur quibusdam, quos fuga minima.
-              </div>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 gap-8 md:m-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 md:mx-12 md:mt-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
               <GoalCard
                 title="Donate"
-                description="to as many orphanages as possible through fundraising events hosted by our club"
+                description="to as many orphanages as possible through fundraising events hosted by our club."
                 logo="/icons/donate-icon.svg"
               />
               <GoalCard
                 title="Impact"
-                description="lives of Vietnamese youth and children by providing items that may be inaccessible"
+                description="lives of Vietnamese youth and children by providing items that may be inaccessible."
                 logo="/icons/impact-icon.svg"
               />
               <GoalCard
@@ -57,12 +51,12 @@ const TeamPage: NextPage = () => {
               />
               <GoalCard
                 title="Raise"
-                description="awareness and bring global support"
+                description="awareness and bring global support."
                 logo="/icons/raise-icon.svg"
               />
               <GoalCard
                 title="Inspire"
-                description="others to take action"
+                description="others to take action."
                 logo="/icons/inspire-icon.svg"
               />
             </div>

@@ -160,15 +160,15 @@ const JoinUsPage: NextPage = () => {
                   <div className="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-2 md:gap-6">
                     <PerkCard
                       title="Perk 1"
-                      description="Develop skills for advocacy and activism"
+                      description="Develop skills for advocacy and activism."
                     />
-                    <PerkCard title="Perk 2" description="Create opportunities to impact lives" />
-                    <PerkCard title="Perk 3" description="Participate in and create fun events" />
+                    <PerkCard title="Perk 2" description="Create opportunities to impact lives." />
+                    <PerkCard title="Perk 3" description="Participate in and create fun events." />
                     <PerkCard
                       title="Perk 4"
-                      description="Participate learn and experience vietnamese culture, history and traditions"
+                      description="Participate learn and experience vietnamese culture, history and traditions."
                     />
-                    <PerkCard title="Perk 5" description="Work globally to help transform lives" />
+                    <PerkCard title="Perk 5" description="Work globally to help transform lives." />
                   </div>
                 </div>
               </div>
