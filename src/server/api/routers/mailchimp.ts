@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { createTRPCRouter, publicProcedure } from "@/server/api/trpc";
+import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 
 export const mailchimpRouter = createTRPCRouter({
@@ -30,11 +31,10 @@ export const mailchimpRouter = createTRPCRouter({
       );
 
       if (response.status >= 400) {
-        const text = await response.text();
-        return {
-          success: false,
-          message: `Failed to subscribe ${input.email} to the newsletter: ${text}`,
-        };
+        throw new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to add user to newsletter",
+        });
       } else {
         return {
           success: true,
