@@ -62,15 +62,9 @@ const JoinUsPage: NextPage = () => {
                     <div className="text-3xl font-bold text-gray-900 sm:text-5xl">
                       Interested in being a member? Join our mailing list!
                     </div>
-
-                    <div className="pt-4 text-gray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor officia
-                      blanditiis repellat in, vero, aperiam porro ipsum laboriosam consequuntur
-                      exercitationem incidunt tempora nisi?
-                    </div>
                   </div>
 
-                  <div className="mx-auto mt-4 max-w-xl">
+                  <div className="mx-auto mt-4 max-w-xl pt-6">
                     <form onSubmit={handleSubmit(onSubmit)} className="relative sm:flex sm:gap-4">
                       <div className="sm:flex-1">
                         <input
