@@ -1,3 +1,4 @@
+import { adminRouter } from "@/server/api/routers/admin";
 import { eventRouter } from "@/server/api/routers/event";
 import { mailchimpRouter } from "@/server/api/routers/mailchimp";
 import { openExecPositionRouter } from "@/server/api/routers/openExecPosition";
@@ -14,6 +15,7 @@ export const appRouter = createTRPCRouter({
   openExecPosition: openExecPositionRouter,
   teamMember: teamMemberRouter,
   mailchimp: mailchimpRouter,
+  admin: adminRouter,
 });
 
 // export type definition of API
