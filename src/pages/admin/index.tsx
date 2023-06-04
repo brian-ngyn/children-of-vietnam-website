@@ -1,3 +1,4 @@
+import RegisteredUsersTable from "@/components/Admin/RegisteredUsers/RegisteredUsersTable";
 import { LoadingPage } from "@/components/LoadingPage";
 import { api } from "@/utils/api";
 import { useUser } from "@clerk/nextjs";
@@ -51,8 +52,10 @@ const AdminPage: NextPage = () => {
       ) : (
         <div className="flex min-h-screen justify-center bg-off-white text-black">
           <div className="flex flex-col items-center pt-4 md:pt-16">
-            <div className="flex max-w-screen-xl flex-col gap-y-8 px-4 py-8 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16">
-              You are verified
+            <div className="flex w-screen flex-col gap-y-8 md:max-w-6xl lg:px-8 lg:pt-16">
+              <div className="px-4">
+                <RegisteredUsersTable />
+              </div>
             </div>
           </div>
         </div>
