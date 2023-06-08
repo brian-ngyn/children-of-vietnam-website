@@ -1,3 +1,6 @@
+import ExecTeamTable from "@/components/Admin/ExecTeam/ExecTeamTable";
+import FutureEventsTable from "@/components/Admin/FutureEvents/FutureEventsTable";
+import PastEventsTable from "@/components/Admin/PastEvents/PastEventsTable";
 import RegisteredUsersTable from "@/components/Admin/RegisteredUsers/RegisteredUsersTable";
 import { LoadingPage } from "@/components/LoadingPage";
 import { api } from "@/utils/api";
@@ -53,8 +56,11 @@ const AdminPage: NextPage = () => {
         <div className="flex min-h-screen justify-center bg-off-white text-black">
           <div className="flex flex-col items-center pt-4 md:pt-16">
             <div className="flex w-screen flex-col gap-y-8 md:max-w-6xl lg:px-8 lg:pt-16">
-              <div className="px-4">
+              <div className="space-y-8 px-4 pb-24">
                 <RegisteredUsersTable />
+                <ExecTeamTable />
+                <FutureEventsTable />
+                <PastEventsTable />
               </div>
             </div>
           </div>
