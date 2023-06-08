@@ -1,6 +1,4 @@
 import { api } from "@/utils/api";
-import { useUser } from "@clerk/nextjs";
-import { type EmailAddress } from "@clerk/nextjs/dist/api";
 import { useRouter } from "next/router";
 
 interface RegisteredUsersRowProps {
@@ -36,7 +34,7 @@ const RegisteredUsersRow = (props: RegisteredUsersRowProps) => {
             <td className="whitespace-nowrap px-4 py-2">
               <button
                 onClick={() => mutate({ userId: userId })}
-                className="inline-block rounded bg-my-blue px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+                className="inline-block rounded bg-my-blue px-4 py-2 text-xs font-medium text-white hover:bg-my-blue/75"
               >
                 Verify
               </button>
