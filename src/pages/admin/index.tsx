@@ -32,8 +32,8 @@ const AdminPage: NextPage = () => {
   if (isLoaded && user && !user?.publicMetadata.is_admin_verified) {
     return (
       <>
-        <div className="flex h-screen w-screen flex-col items-center justify-center bg-off-white">
-          <div className="max-w-3xl text-center">
+        <div className="flex h-screen w-full flex-col items-center justify-center bg-off-white">
+          <div className="max-w-3xl px-4 text-center">
             <div className="text-3xl font-semibold">
               {"You are not authorized to the Admin Portal."}
             </div>
@@ -54,8 +54,8 @@ const AdminPage: NextPage = () => {
         <LoadingPage />
       ) : (
         <div className="flex min-h-screen justify-center bg-off-white text-black">
-          <div className="flex flex-col items-center pt-4 md:pt-16">
-            <div className="flex w-screen flex-col gap-y-8 md:max-w-6xl lg:px-8 lg:pt-16">
+          <div className="flex flex-col items-center pt-10 md:pt-0">
+            <div className="flex w-screen flex-col gap-y-8 px-3 md:max-w-6xl lg:px-8 lg:pt-16">
               <div className="space-y-8 px-4 pb-24">
                 <RegisteredUsersTable />
                 <ExecTeamTable />
