@@ -1,14 +1,19 @@
-import { api } from "@/utils/api";
+import ExecTeamEditModal from "@/components/Admin/ExecTeam/ExecTeamEditModal";
 import { type TeamMember } from "@prisma/client";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 interface TeamMemberProps {
   teamMember: TeamMember;
 }
 
 const ExecTeamRow = ({ teamMember }: TeamMemberProps) => {
-  const { id, memberName, memberRole, memberDescription, memberImage } = teamMember;
-  const router = useRouter();
+  const { memberName, memberRole, memberDescription } = teamMember;
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
 
   return (
     <>
@@ -18,12 +23,15 @@ const ExecTeamRow = ({ teamMember }: TeamMemberProps) => {
         <td className="whitespace-nowrap px-4 py-2 text-gray-700">{memberDescription}</td>
         <td className="flex justify-end whitespace-nowrap px-4 py-2 md:pr-12">
           <button
-            onClick={() => alert("work in progress")}
+            onClick={toggleModal}
             className="rounded bg-my-blue px-4 py-2 text-xs font-medium text-white hover:bg-my-blue/75"
           >
             Edit
           </button>
         </td>
+        <div className={`${modalOpen ? "" : "hidden"}`}>
+          <ExecTeamEditModal toggleModal={toggleModal} teamMember={teamMember} />
+        </div>
       </tr>
     </>
   );
