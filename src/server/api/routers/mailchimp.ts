@@ -1,14 +1,16 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import { createTRPCRouter, publicProcedure } from "@/server/api/trpc";
-import { TRPCError } from "@trpc/server";
 import { z } from "zod";
+
+import { TRPCError } from "@trpc/server";
+
+import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
 export const mailchimpRouter = createTRPCRouter({
   subscribe: publicProcedure
     .input(
       z.object({
         email: z.string().email(),
-      })
+      }),
     )
     .mutation(async ({ input }) => {
       const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
@@ -27,7 +29,7 @@ export const mailchimpRouter = createTRPCRouter({
             "Content-Type": "application/json",
           },
           method: "POST",
-        }
+        },
       );
 
       if (response.status >= 400) {

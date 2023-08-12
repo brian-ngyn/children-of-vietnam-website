@@ -1,5 +1,6 @@
-import ExecTeamRow from "@/components/Admin/ExecTeam/ExecTeamRow";
-import { api } from "@/utils/api";
+import { api } from "~/utils/api";
+
+import ExecTeamRow from "~/components/Admin/ExecTeam/ExecTeamRow";
 
 const ExecTeamTable = () => {
   const { data, isLoading } = api.teamMember.getAll.useQuery();
@@ -13,8 +14,12 @@ const ExecTeamTable = () => {
             <table className="min-w-full divide-y-2 divide-gray-200 text-sm">
               <thead>
                 <tr className="text-left">
-                  <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Name</th>
-                  <th className="max-w-sm px-4 py-2 font-medium text-gray-900">Role</th>
+                  <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    Name
+                  </th>
+                  <th className="max-w-sm px-4 py-2 font-medium text-gray-900">
+                    Role
+                  </th>
                   <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                     Description
                   </th>
@@ -23,7 +28,9 @@ const ExecTeamTable = () => {
 
               <tbody className="divide-y divide-gray-200">
                 {data?.map((teamMember) => {
-                  return <ExecTeamRow key={teamMember.id} teamMember={teamMember} />;
+                  return (
+                    <ExecTeamRow key={teamMember.id} teamMember={teamMember} />
+                  );
                 })}
               </tbody>
             </table>

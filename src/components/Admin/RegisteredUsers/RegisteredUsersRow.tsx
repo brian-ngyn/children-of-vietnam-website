@@ -1,5 +1,6 @@
-import { api } from "@/utils/api";
 import { useRouter } from "next/router";
+
+import { api } from "~/utils/api";
 
 interface RegisteredUsersRowProps {
   userId: string;
@@ -24,7 +25,9 @@ const RegisteredUsersRow = (props: RegisteredUsersRowProps) => {
   return (
     <>
       <tr>
-        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{name}</td>
+        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          {name}
+        </td>
         <td className="whitespace-nowrap px-4 py-2 text-gray-700">{email}</td>
         <td className="whitespace-nowrap px-4 py-2 text-gray-700">
           {metadata.is_admin_verified ? "Yes" : "No"}

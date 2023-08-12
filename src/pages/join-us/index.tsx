@@ -1,12 +1,14 @@
-import ExecPositionCard from "@/components/Cards/ExecPositionCard";
-import PerkCard from "@/components/Cards/PerkCard";
-import Carousel from "@/components/Carousel/Carousel";
-import { LoadingPage } from "@/components/LoadingPage";
-import { api } from "@/utils/api";
 import { type NextPage } from "next";
 import Image from "next/image";
 import { useState } from "react";
-import { useForm, type SubmitHandler } from "react-hook-form";
+import { type SubmitHandler, useForm } from "react-hook-form";
+
+import { api } from "~/utils/api";
+
+import ExecPositionCard from "~/components/Cards/ExecPositionCard";
+import PerkCard from "~/components/Cards/PerkCard";
+import Carousel from "~/components/Carousel/Carousel";
+import { LoadingPage } from "~/components/LoadingPage";
 
 type Inputs = {
   email: string;
@@ -20,7 +22,8 @@ const JoinUsPage: NextPage = () => {
     "temp-slides/slide4.svg",
   ];
 
-  const [successfullySubscribed, setSuccessfullySubscribed] = useState<boolean>(false);
+  const [successfullySubscribed, setSuccessfullySubscribed] =
+    useState<boolean>(false);
   const { data, isLoading } = api.openExecPosition.getAll.useQuery();
   const {
     register,
@@ -29,20 +32,21 @@ const JoinUsPage: NextPage = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const { mutate, isLoading: isSubscribing } = api.mailchimp.subscribe.useMutation({
-    onSuccess: () => {
-      reset();
-      setSuccessfullySubscribed(true);
-      // now wait 5 seconds and set it back to false
-      setTimeout(() => {
-        setSuccessfullySubscribed(false);
-      }, 5000);
-    },
-    onError: (e) => {
-      const errorMessage = e.data?.zodError?.fieldErrors.content;
-      console.log(errorMessage);
-    },
-  });
+  const { mutate, isLoading: isSubscribing } =
+    api.mailchimp.subscribe.useMutation({
+      onSuccess: () => {
+        reset();
+        setSuccessfullySubscribed(true);
+        // now wait 5 seconds and set it back to false
+        setTimeout(() => {
+          setSuccessfullySubscribed(false);
+        }, 5000);
+      },
+      onError: (e) => {
+        const errorMessage = e.data?.zodError?.fieldErrors.content;
+        console.log(errorMessage);
+      },
+    });
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     mutate(data);
@@ -65,7 +69,10 @@ const JoinUsPage: NextPage = () => {
                   </div>
 
                   <div className="mx-auto mt-4 max-w-xl pt-6">
-                    <form onSubmit={handleSubmit(onSubmit)} className="relative sm:flex sm:gap-4">
+                    <form
+                      onSubmit={() => handleSubmit(onSubmit)}
+                      className="relative sm:flex sm:gap-4"
+                    >
                       <div className="sm:flex-1">
                         <input
                           placeholder="Email address"
@@ -129,7 +136,9 @@ const JoinUsPage: NextPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-8 text-3xl font-bold sm:text-5xl">Open Executive Positions</div>
+              <div className="mt-8 text-3xl font-bold sm:text-5xl">
+                Open Executive Positions
+              </div>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 {data?.map((openExecPosition) => {
                   return (
@@ -139,13 +148,20 @@ const JoinUsPage: NextPage = () => {
                   );
                 })}
               </div>
-              <div className="pt-16 text-3xl font-bold sm:text-5xl">Member Perks</div>
+              <div className="pt-16 text-3xl font-bold sm:text-5xl">
+                Member Perks
+              </div>
               <div className="flex w-full flex-col items-center justify-center pb-16 md:flex-row md:gap-12">
                 <Carousel loop>
                   {images.map((src, i) => {
                     return (
                       <div className="relative h-64 flex-[0_0_100%]" key={i}>
-                        <Image src={src} fill alt="alt" style={{ objectFit: "cover" }} />
+                        <Image
+                          src={src}
+                          fill
+                          alt="alt"
+                          style={{ objectFit: "cover" }}
+                        />
                       </div>
                     );
                   })}
@@ -156,13 +172,22 @@ const JoinUsPage: NextPage = () => {
                       title="Perk 1"
                       description="Develop skills for advocacy and activism."
                     />
-                    <PerkCard title="Perk 2" description="Create opportunities to impact lives." />
-                    <PerkCard title="Perk 3" description="Participate in and create fun events." />
+                    <PerkCard
+                      title="Perk 2"
+                      description="Create opportunities to impact lives."
+                    />
+                    <PerkCard
+                      title="Perk 3"
+                      description="Participate in and create fun events."
+                    />
                     <PerkCard
                       title="Perk 4"
                       description="Participate learn and experience vietnamese culture, history and traditions."
                     />
-                    <PerkCard title="Perk 5" description="Work globally to help transform lives." />
+                    <PerkCard
+                      title="Perk 5"
+                      description="Work globally to help transform lives."
+                    />
                   </div>
                 </div>
               </div>

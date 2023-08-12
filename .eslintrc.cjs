@@ -1,7 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const prettierConfig = require("./prettier.config.cjs");
+
+const project = path.join(__dirname, "tsconfig.json");
 
 /** @type {import("eslint").Linter.Config} */
 const config = {
@@ -13,15 +14,15 @@ const config = {
       ],
       files: ["*.ts", "*.tsx"],
       parserOptions: {
-        project: path.join(__dirname, "tsconfig.json"),
+        project,
       },
     },
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: path.join(__dirname, "tsconfig.json"),
+    project,
   },
-  plugins: ["@typescript-eslint", "promise"],
+  plugins: ["@typescript-eslint", "prettier", "promise"],
   extends: [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
@@ -31,18 +32,9 @@ const config = {
   ],
   rules: {
     "@typescript-eslint/consistent-type-imports": [
-      "warn",
+      "error",
       {
         prefer: "type-imports",
-        fixStyle: "inline-type-imports",
-      },
-    ],
-    "@typescript-eslint/no-misused-promises": [
-      2,
-      {
-        checksVoidReturn: {
-          attributes: false,
-        },
       },
     ],
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
@@ -50,8 +42,10 @@ const config = {
     "prettier/prettier": ["error", prettierConfig],
     "no-eval": "error",
     "no-var": "error",
-    "tailwindcss/no-custom-classname": "error",
+    "prettier/prettier": "error",
     "no-restricted-imports": ["error", { patterns: [".*"] }],
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/classnames-order": "off", // tcss prettier plugin handles this
   },
 };
 

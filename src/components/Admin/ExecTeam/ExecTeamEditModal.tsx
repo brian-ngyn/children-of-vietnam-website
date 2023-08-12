@@ -1,6 +1,7 @@
-import { type TeamMember } from "@prisma/client";
 import Image from "next/image";
-import { useForm, type SubmitHandler } from "react-hook-form";
+import { type SubmitHandler, useForm } from "react-hook-form";
+
+import { type TeamMember } from "@prisma/client";
 
 interface TeamMemberProps {
   teamMember: TeamMember;
@@ -34,7 +35,12 @@ const ExecTeamEditModal = ({ teamMember, toggleModal }: TeamMemberProps) => {
               <div className="flex w-full items-center justify-between">
                 <div className="text-xl font-semibold">Edit Member</div>
                 <div onClick={toggleModal} className="hover:cursor-pointer">
-                  <Image src="/icons/circle-xmark.svg" alt="close" width={20} height={20} />
+                  <Image
+                    src="/icons/circle-xmark.svg"
+                    alt="close"
+                    width={20}
+                    height={20}
+                  />
                 </div>
               </div>
               <div className="mt-6 flex grow flex-col">
@@ -84,7 +90,9 @@ const ExecTeamEditModal = ({ teamMember, toggleModal }: TeamMemberProps) => {
                     </div>
                     <textarea
                       defaultValue={
-                        teamMember.memberDescription ? teamMember.memberDescription : ""
+                        teamMember.memberDescription
+                          ? teamMember.memberDescription
+                          : ""
                       }
                       {...register("memberDescription", {
                         required: false,
@@ -97,7 +105,7 @@ const ExecTeamEditModal = ({ teamMember, toggleModal }: TeamMemberProps) => {
                 <div className="flex w-full grow items-end justify-center self-end">
                   <button
                     type="submit"
-                    onClick={handleSubmit(onSubmit)}
+                    onClick={() => handleSubmit(onSubmit)}
                     className="mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-green px-5 py-3 text-white shadow-md transition hover:bg-green/75 focus:outline-none sm:mt-0 sm:w-auto"
                   >
                     <span className="text-sm font-medium">Submit</span>

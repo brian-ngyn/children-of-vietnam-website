@@ -1,9 +1,11 @@
-import { LoadingPage } from "@/components/LoadingPage";
-import { SignUp } from "@clerk/nextjs";
-import { useUser } from "@clerk/nextjs";
 import { type NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+
+import { SignUp } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
+
+import { LoadingPage } from "~/components/LoadingPage";
 
 const SignUpPage: NextPage = () => {
   const { isLoaded, isSignedIn } = useUser();
@@ -19,7 +21,12 @@ const SignUpPage: NextPage = () => {
     <>
       {isLoaded && !isSignedIn ? (
         <div className="flex min-h-screen flex-col items-center bg-off-white pt-[10%] text-black">
-          <SignUp path="/sign-up" routing="path" signInUrl="/sign-in" redirectUrl="/admin" />
+          <SignUp
+            path="/sign-up"
+            routing="path"
+            signInUrl="/sign-in"
+            redirectUrl="/admin"
+          />
         </div>
       ) : (
         <LoadingPage />

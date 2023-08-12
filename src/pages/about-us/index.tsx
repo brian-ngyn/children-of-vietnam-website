@@ -1,7 +1,9 @@
-import GoalCard from "@/components/Cards/GoalCard";
-import { api } from "@/utils/api";
 import { type NextPage } from "next";
 import Image from "next/image";
+
+import { api } from "~/utils/api";
+
+import GoalCard from "~/components/Cards/GoalCard";
 
 const TeamPage: NextPage = () => {
   return (
@@ -13,20 +15,30 @@ const TeamPage: NextPage = () => {
               <div className="flex flex-col">
                 <div className="text-3xl font-bold sm:text-5xl">Mission</div>
                 <div className="mt-4 text-gray-600">
-                  By raising awareness and money for children, we hope to increase accessibility to
-                  essential items and supplies, as well as aid in achieving a better future for
-                  these children.
+                  By raising awareness and money for children, we hope to
+                  increase accessibility to essential items and supplies, as
+                  well as aid in achieving a better future for these children.
                 </div>
               </div>
               <div className="flex h-64 justify-center">
                 <div className="relative aspect-square overflow-visible">
-                  <Image fill src="/images/support.svg" alt="Logo" style={{ objectFit: "cover" }} />
+                  <Image
+                    fill
+                    src="/images/support.svg"
+                    alt="Logo"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
               </div>
             </div>
 
             <div className="my-12 flex items-center justify-center">
-              <Image src="/icons/ellipsis-vertical.svg" width={12} height={55} alt="ellipsis" />
+              <Image
+                src="/icons/ellipsis-vertical.svg"
+                width={12}
+                height={55}
+                alt="ellipsis"
+              />
             </div>
 
             <div className="max-w-2xl">

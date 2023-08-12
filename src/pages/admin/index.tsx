@@ -1,13 +1,16 @@
-import ExecTeamTable from "@/components/Admin/ExecTeam/ExecTeamTable";
-import FutureEventsTable from "@/components/Admin/FutureEvents/FutureEventsTable";
-import PastEventsTable from "@/components/Admin/PastEvents/PastEventsTable";
-import RegisteredUsersTable from "@/components/Admin/RegisteredUsers/RegisteredUsersTable";
-import { LoadingPage } from "@/components/LoadingPage";
-import { api } from "@/utils/api";
-import { useUser } from "@clerk/nextjs";
 import { type NextPage } from "next";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+import { useUser } from "@clerk/nextjs";
+
+import { api } from "~/utils/api";
+
+import ExecTeamTable from "~/components/Admin/ExecTeam/ExecTeamTable";
+import FutureEventsTable from "~/components/Admin/FutureEvents/FutureEventsTable";
+import PastEventsTable from "~/components/Admin/PastEvents/PastEventsTable";
+import RegisteredUsersTable from "~/components/Admin/RegisteredUsers/RegisteredUsersTable";
+import { LoadingPage } from "~/components/LoadingPage";
 
 const AdminPage: NextPage = () => {
   const { user, isLoaded, isSignedIn } = useUser();

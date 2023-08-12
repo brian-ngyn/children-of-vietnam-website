@@ -1,14 +1,16 @@
-import { createTRPCRouter, privateProcedure } from "@/server/api/trpc";
+import { z } from "zod";
+
 import { users } from "@clerk/nextjs/dist/api";
 import { TRPCError } from "@trpc/server";
-import { z } from "zod";
+
+import { createTRPCRouter, privateProcedure } from "~/server/api/trpc";
 
 export const adminRouter = createTRPCRouter({
   verifyUser: privateProcedure
     .input(
       z.object({
         userId: z.string(),
-      })
+      }),
     )
     .mutation(async ({ ctx, input }) => {
       const userSubmittingRequest = await users.getUser(ctx.userId);

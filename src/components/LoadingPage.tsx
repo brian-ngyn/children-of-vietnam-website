@@ -9,7 +9,11 @@ export const LoadingSpinner = (props: { size?: number }) => {
         viewBox="0 0 100 100"
         preserveAspectRatio="xMidYMid"
       >
-        <path d="M23 50A27 27 0 0 0 77 50A27 29.1 0 0 1 23 50" fill="#4A6FA5" stroke="none">
+        <path
+          d="M23 50A27 27 0 0 0 77 50A27 29.1 0 0 1 23 50"
+          fill="#4A6FA5"
+          stroke="none"
+        >
           <animateTransform
             attributeName="transform"
             type="rotate"

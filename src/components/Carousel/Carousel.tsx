@@ -1,8 +1,9 @@
-import CarouselDots from "@/components/Carousel/CarouselDots";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel, { type EmblaOptionsType } from "embla-carousel-react";
 import React from "react";
 import { type PropsWithChildren, useEffect, useState } from "react";
+
+import CarouselDots from "~/components/Carousel/CarouselDots";
 
 type Props = PropsWithChildren & EmblaOptionsType;
 useEmblaCarousel.globalOptions = { loop: true };

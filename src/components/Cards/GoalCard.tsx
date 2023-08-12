@@ -13,7 +13,12 @@ const GoalCard = (props: GoalCardProps) => {
       <div className="flex items-center gap-4 rounded-xl border-2 p-4">
         <div className={`aspect-square shrink-0 rounded-lg p-3`}>
           <div className="relative h-16 w-16">
-            <Image src={logo} fill style={{ objectFit: "contain" }} alt="Icon" />
+            <Image
+              src={logo}
+              fill
+              style={{ objectFit: "contain" }}
+              alt="Icon"
+            />
           </div>
         </div>
 

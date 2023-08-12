@@ -1,13 +1,21 @@
-import { type Event } from "@prisma/client";
 import Image from "next/image";
+
+import { type Event } from "@prisma/client";
 
 interface EventCardProps {
   event: Event;
 }
 
 const EventCard = ({ event }: EventCardProps) => {
-  const { id, eventTitle, eventDescription, eventDate, eventTime, eventPicture, eventLocation } =
-    event;
+  const {
+    id,
+    eventTitle,
+    eventDescription,
+    eventDate,
+    eventTime,
+    eventPicture,
+    eventLocation,
+  } = event;
   return (
     <>
       <div className="block rounded-lg bg-gray-100 p-4 shadow-lg transition hover:shadow-xl">
@@ -64,7 +72,12 @@ const EventCard = ({ event }: EventCardProps) => {
 
             <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
               <div className="relative h-4 w-4">
-                <Image alt="Where" src="/icons/clock.svg" fill style={{ objectFit: "contain" }} />
+                <Image
+                  alt="Where"
+                  src="/icons/clock.svg"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
               </div>
 
               <div className="mt-1.5 sm:mt-0">

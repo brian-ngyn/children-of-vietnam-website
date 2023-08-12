@@ -1,9 +1,9 @@
-import { adminRouter } from "@/server/api/routers/admin";
-import { eventRouter } from "@/server/api/routers/event";
-import { mailchimpRouter } from "@/server/api/routers/mailchimp";
-import { openExecPositionRouter } from "@/server/api/routers/openExecPosition";
-import { teamMemberRouter } from "@/server/api/routers/teamMember";
-import { createTRPCRouter } from "@/server/api/trpc";
+import { adminRouter } from "~/server/api/routers/admin";
+import { eventRouter } from "~/server/api/routers/event";
+import { mailchimpRouter } from "~/server/api/routers/mailchimp";
+import { openExecPositionRouter } from "~/server/api/routers/openExecPosition";
+import { teamMemberRouter } from "~/server/api/routers/teamMember";
+import { createTRPCRouter } from "~/server/api/trpc";
 
 /**
  * This is the primary router for your server.

@@ -1,7 +1,9 @@
-import ExecTeamEditModal from "@/components/Admin/ExecTeam/ExecTeamEditModal";
-import { type TeamMember } from "@prisma/client";
 import { useRouter } from "next/router";
 import { useState } from "react";
+
+import { type TeamMember } from "@prisma/client";
+
+import ExecTeamEditModal from "~/components/Admin/ExecTeam/ExecTeamEditModal";
 
 interface TeamMemberProps {
   teamMember: TeamMember;
@@ -18,9 +20,13 @@ const ExecTeamRow = ({ teamMember }: TeamMemberProps) => {
   return (
     <>
       <tr>
-        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{memberName}</td>
+        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          {memberName}
+        </td>
         <td className="max-w-sm px-4 py-2 text-gray-700">{memberRole}</td>
-        <td className="whitespace-nowrap px-4 py-2 text-gray-700">{memberDescription}</td>
+        <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+          {memberDescription}
+        </td>
         <td className="flex justify-end whitespace-nowrap px-4 py-2 md:pr-12">
           <button
             onClick={toggleModal}
@@ -30,7 +36,10 @@ const ExecTeamRow = ({ teamMember }: TeamMemberProps) => {
           </button>
         </td>
         <div className={`${modalOpen ? "" : "hidden"}`}>
-          <ExecTeamEditModal toggleModal={toggleModal} teamMember={teamMember} />
+          <ExecTeamEditModal
+            toggleModal={toggleModal}
+            teamMember={teamMember}
+          />
         </div>
       </tr>
     </>
