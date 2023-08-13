@@ -42,7 +42,7 @@ const config = {
     "prettier/prettier": ["error", prettierConfig],
     "no-eval": "error",
     "no-var": "error",
-    "prettier/prettier": "error",
+    // "prettier/prettier": "error",
     "no-restricted-imports": ["error", { patterns: [".*"] }],
     "tailwindcss/no-custom-classname": "off",
     "tailwindcss/classnames-order": "off", // tcss prettier plugin handles this
