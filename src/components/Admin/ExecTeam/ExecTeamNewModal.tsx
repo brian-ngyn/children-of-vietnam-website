@@ -116,7 +116,7 @@ const ExecTeamNewModal = ({ toggleModal }: TeamMemberProps) => {
                   <div className="absolute left-0 w-full items-center justify-center">
                     <div className="mt-3 flex cursor-default flex-col items-center justify-center">
                       <span
-                        className={`absolute top-3 text-red-700 transition-all duration-300 ease-in-out ${
+                        className={`text-red-700 absolute top-3 transition-all duration-300 ease-in-out ${
                           errors.memberName ? "opacity-100" : "opacity-0"
                         }`}
                       >
