@@ -22,16 +22,6 @@ const AdminPage: NextPage = () => {
     }
   }, [isLoaded, isSignedIn, router]);
 
-  const { mutate, isLoading: isVerifying } = api.admin.verifyUser.useMutation({
-    onSuccess: () => {
-      router.reload();
-    },
-    onError: (e) => {
-      const errorMessage = e.data?.zodError?.fieldErrors.content;
-      console.log(errorMessage);
-    },
-  });
-
   if (isLoaded && user && !user?.publicMetadata.is_admin_verified) {
     return (
       <>

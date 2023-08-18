@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import { type TeamMember } from "@prisma/client";
 
-import ExecTeamEditModal from "~/components/Admin/ExecTeam/ExecTeamEditModal";
+import ExecTeamUpdateModal from "~/components/Admin/ExecTeam/ExecTeamUpdateModal";
 
 interface TeamMemberProps {
   teamMember: TeamMember;
@@ -36,7 +36,7 @@ const ExecTeamRow = ({ teamMember }: TeamMemberProps) => {
           </button>
         </td>
         <div className={`${modalOpen ? "" : "hidden"}`}>
-          <ExecTeamEditModal
+          <ExecTeamUpdateModal
             toggleModal={toggleModal}
             teamMember={teamMember}
           />
