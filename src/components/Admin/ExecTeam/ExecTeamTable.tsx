@@ -10,7 +10,6 @@ const ExecTeamTable = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleModal = () => {
-    console.log("a");
     setModalOpen(!modalOpen);
   };
 

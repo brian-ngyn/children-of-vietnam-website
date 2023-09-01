@@ -1,15 +1,31 @@
+import { useState } from "react";
+
 import { api } from "~/utils/api";
 
+import FutureEventsNewModal from "~/components/Admin/FutureEvents/FutureEventsNewModal";
 import FutureEventsRow from "~/components/Admin/FutureEvents/FutureEventsRow";
 
 const EventsTable = () => {
   const { data, isLoading } = api.event.getAll.useQuery();
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
 
   return (
     <>
       {!isLoading && (
         <div>
-          <div className="pb-2 text-2xl font-semibold">Future Events</div>
+          <div className="flex justify-between pb-2 text-2xl font-semibold">
+            <div>Future Events</div>
+            <button
+              onClick={toggleModal}
+              className="rounded bg-green px-4 py-2 text-xs font-medium text-white hover:bg-green/75"
+            >
+              New Event
+            </button>
+          </div>
           <div className="overflow-x-auto rounded-md bg-white p-2 shadow-lg">
             <table className="min-w-full divide-y-2 divide-gray-200 text-sm">
               <thead>
@@ -41,6 +57,9 @@ const EventsTable = () => {
                   })}
               </tbody>
             </table>
+          </div>
+          <div className={`${modalOpen ? "" : "hidden"}`}>
+            <FutureEventsNewModal toggleModal={toggleModal} />
           </div>
         </div>
       )}
